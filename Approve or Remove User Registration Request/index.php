@@ -15,7 +15,7 @@
                 <a href="User/index.php"><img src="icon/group.png" class="img-rounded img_size" alt="user"><p style="text-align:center; margin: 20px 0;">User</p></a>
             </div>
             <?php 
-                $sql = "SELECT* FROM `user` WHERE `request` = 'Rejected'";
+                $sql = "SELECT* FROM `user` WHERE `request` = 'Rejected' or `request`='Accepted'";
                 $query = mysqli_query($con, $sql);
                 $row = mysqli_num_rows($query);
             ?>
